@@ -2,7 +2,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-
+import countriesRouter from "./routes/CountryRoutes";
 // Create an Express application
 const app = express();
 
@@ -13,8 +13,9 @@ app.use(cors());
 // Routes
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Hello" });
-}); // Use your country routes
+});
 
+app.use("/", countriesRouter);
 // // Error handling middleware
 // app.use((err, req, res, next) => {
 //   console.error(err.stack);
