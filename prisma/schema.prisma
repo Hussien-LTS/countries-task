@@ -18,8 +18,8 @@ model Country {
   cca2      String
   cca3      String
   ccn3      Int
-  currencies Boolean  @default(false)
+  currencies Json 
   region    String
-  coordinates Decimal[]
+  latlng Decimal[]
 }
 
