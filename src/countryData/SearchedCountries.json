@@ -1,0 +1,35 @@
+{
+  "count": 1,
+  "page": 1,
+  "pageSize": 10,
+  "data": [
+    {
+      "id": 1262,
+      "common_name": "Namibia",
+      "official_name": "Republic of Namibia",
+      "languages": [
+        "afr",
+        "deu",
+        "eng",
+        "her",
+        "hgm",
+        "kwn",
+        "loz",
+        "ndo",
+        "tsn"
+      ],
+      "cca2": "NA",
+      "cca3": "NAM",
+      "ccn3": "516",
+      "currencies": [
+        "NAD",
+        "ZAR"
+      ],
+      "region": "Africa",
+      "latlng": [
+        -22,
+        17
+      ]
+    }
+  ]
+}
