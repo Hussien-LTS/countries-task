@@ -49,8 +49,6 @@ Make sure you have the following installed on your machine:
     ```
 
 - The application should now be running at `http://localhost:3000`.
-- Or you can use directly `https://countries-api-frtw.onrender.com`as it it already deployed
-  - **Note**: Since **countries-API** using free hosting  service you may encounter slow response due to the sleep time of the service.
 
 ## Scripts
 
