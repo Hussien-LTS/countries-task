@@ -1,0 +1,203 @@
+{
+  "count": 10,
+  "page": 5,
+  "pageSize": 10,
+  "data": [
+    {
+      "id": 1291,
+      "common_name": "Guatemala",
+      "official_name": "Republic of Guatemala",
+      "languages": [
+        "spa"
+      ],
+      "cca2": "GT",
+      "cca3": "GTM",
+      "ccn3": "320",
+      "currencies": [
+        "GTQ"
+      ],
+      "region": "Americas",
+      "latlng": [
+        15.5,
+        -90.25
+      ]
+    },
+    {
+      "id": 1292,
+      "common_name": "South Korea",
+      "official_name": "Republic of Korea",
+      "languages": [
+        "kor"
+      ],
+      "cca2": "KR",
+      "cca3": "KOR",
+      "ccn3": "410",
+      "currencies": [
+        "KRW"
+      ],
+      "region": "Asia",
+      "latlng": [
+        37,
+        127.5
+      ]
+    },
+    {
+      "id": 1293,
+      "common_name": "Estonia",
+      "official_name": "Republic of Estonia",
+      "languages": [
+        "est"
+      ],
+      "cca2": "EE",
+      "cca3": "EST",
+      "ccn3": "233",
+      "currencies": [
+        "EUR"
+      ],
+      "region": "Europe",
+      "latlng": [
+        59,
+        26
+      ]
+    },
+    {
+      "id": 1294,
+      "common_name": "Nepal",
+      "official_name": "Federal Democratic Republic of Nepal",
+      "languages": [
+        "nep"
+      ],
+      "cca2": "NP",
+      "cca3": "NPL",
+      "ccn3": "524",
+      "currencies": [
+        "NPR"
+      ],
+      "region": "Asia",
+      "latlng": [
+        28,
+        84
+      ]
+    },
+    {
+      "id": 1295,
+      "common_name": "Kosovo",
+      "official_name": "Republic of Kosovo",
+      "languages": [
+        "sqi",
+        "srp"
+      ],
+      "cca2": "XK",
+      "cca3": "UNK",
+      "ccn3": "0",
+      "currencies": [
+        "EUR"
+      ],
+      "region": "Europe",
+      "latlng": [
+        42.666667,
+        21.166667
+      ]
+    },
+    {
+      "id": 1296,
+      "common_name": "Botswana",
+      "official_name": "Republic of Botswana",
+      "languages": [
+        "eng",
+        "tsn"
+      ],
+      "cca2": "BW",
+      "cca3": "BWA",
+      "ccn3": "072",
+      "currencies": [
+        "BWP"
+      ],
+      "region": "Africa",
+      "latlng": [
+        -22,
+        24
+      ]
+    },
+    {
+      "id": 1297,
+      "common_name": "Philippines",
+      "official_name": "Republic of the Philippines",
+      "languages": [
+        "eng",
+        "fil"
+      ],
+      "cca2": "PH",
+      "cca3": "PHL",
+      "ccn3": "608",
+      "currencies": [
+        "PHP"
+      ],
+      "region": "Asia",
+      "latlng": [
+        13,
+        122
+      ]
+    },
+    {
+      "id": 1298,
+      "common_name": "Saint Pierre and Miquelon",
+      "official_name": "Saint Pierre and Miquelon",
+      "languages": [
+        "fra"
+      ],
+      "cca2": "PM",
+      "cca3": "SPM",
+      "ccn3": "666",
+      "currencies": [
+        "EUR"
+      ],
+      "region": "Americas",
+      "latlng": [
+        46.83333333,
+        -56.33333333
+      ]
+    },
+    {
+      "id": 1299,
+      "common_name": "Iraq",
+      "official_name": "Republic of Iraq",
+      "languages": [
+        "ara",
+        "arc",
+        "ckb"
+      ],
+      "cca2": "IQ",
+      "cca3": "IRQ",
+      "ccn3": "368",
+      "currencies": [
+        "IQD"
+      ],
+      "region": "Asia",
+      "latlng": [
+        33,
+        44
+      ]
+    },
+    {
+      "id": 1300,
+      "common_name": "Lebanon",
+      "official_name": "Lebanese Republic",
+      "languages": [
+        "ara",
+        "fra"
+      ],
+      "cca2": "LB",
+      "cca3": "LBN",
+      "ccn3": "422",
+      "currencies": [
+        "LBP"
+      ],
+      "region": "Asia",
+      "latlng": [
+        33.83333333,
+        35.83333333
+      ]
+    }
+  ]
+}
