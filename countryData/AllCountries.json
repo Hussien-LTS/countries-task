@@ -1,0 +1,203 @@
+{
+  "count": 10,
+  "page": 1,
+  "pageSize": 10,
+  "data": [
+    {
+      "id": 251,
+      "common_name": "Christmas Island",
+      "official_name": "Territory of Christmas Island",
+      "languages": [
+        "eng"
+      ],
+      "cca2": "CX",
+      "cca3": "CXR",
+      "ccn3": "162",
+      "currencies": [
+        "AUD"
+      ],
+      "region": "Oceania",
+      "latlng": [
+        -10.5,
+        105.66666666
+      ]
+    },
+    {
+      "id": 252,
+      "common_name": "Eritrea",
+      "official_name": "State of Eritrea",
+      "languages": [
+        "ara",
+        "eng",
+        "tir"
+      ],
+      "cca2": "ER",
+      "cca3": "ERI",
+      "ccn3": "232",
+      "currencies": [
+        "ERN"
+      ],
+      "region": "Africa",
+      "latlng": [
+        15,
+        39
+      ]
+    },
+    {
+      "id": 253,
+      "common_name": "Samoa",
+      "official_name": "Independent State of Samoa",
+      "languages": [
+        "eng",
+        "smo"
+      ],
+      "cca2": "WS",
+      "cca3": "WSM",
+      "ccn3": "882",
+      "currencies": [
+        "WST"
+      ],
+      "region": "Oceania",
+      "latlng": [
+        -13.58333333,
+        -172.33333333
+      ]
+    },
+    {
+      "id": 254,
+      "common_name": "North Macedonia",
+      "official_name": "Republic of North Macedonia",
+      "languages": [
+        "mkd"
+      ],
+      "cca2": "MK",
+      "cca3": "MKD",
+      "ccn3": "807",
+      "currencies": [
+        "MKD"
+      ],
+      "region": "Europe",
+      "latlng": [
+        41.83333333,
+        22
+      ]
+    },
+    {
+      "id": 255,
+      "common_name": "Djibouti",
+      "official_name": "Republic of Djibouti",
+      "languages": [
+        "ara",
+        "fra"
+      ],
+      "cca2": "DJ",
+      "cca3": "DJI",
+      "ccn3": "262",
+      "currencies": [
+        "DJF"
+      ],
+      "region": "Africa",
+      "latlng": [
+        11.5,
+        43
+      ]
+    },
+    {
+      "id": 256,
+      "common_name": "Jordan",
+      "official_name": "Hashemite Kingdom of Jordan",
+      "languages": [
+        "ara"
+      ],
+      "cca2": "JO",
+      "cca3": "JOR",
+      "ccn3": "400",
+      "currencies": [
+        "JOD"
+      ],
+      "region": "Asia",
+      "latlng": [
+        31,
+        36
+      ]
+    },
+    {
+      "id": 257,
+      "common_name": "Pakistan",
+      "official_name": "Islamic Republic of Pakistan",
+      "languages": [
+        "eng",
+        "urd"
+      ],
+      "cca2": "PK",
+      "cca3": "PAK",
+      "ccn3": "586",
+      "currencies": [
+        "PKR"
+      ],
+      "region": "Asia",
+      "latlng": [
+        30,
+        70
+      ]
+    },
+    {
+      "id": 258,
+      "common_name": "French Polynesia",
+      "official_name": "French Polynesia",
+      "languages": [
+        "fra"
+      ],
+      "cca2": "PF",
+      "cca3": "PYF",
+      "ccn3": "258",
+      "currencies": [
+        "XPF"
+      ],
+      "region": "Oceania",
+      "latlng": [
+        17.6797,
+        149.4068
+      ]
+    },
+    {
+      "id": 259,
+      "common_name": "Ireland",
+      "official_name": "Republic of Ireland",
+      "languages": [
+        "eng",
+        "gle"
+      ],
+      "cca2": "IE",
+      "cca3": "IRL",
+      "ccn3": "372",
+      "currencies": [
+        "EUR"
+      ],
+      "region": "Europe",
+      "latlng": [
+        53,
+        -8
+      ]
+    },
+    {
+      "id": 260,
+      "common_name": "Mauritania",
+      "official_name": "Islamic Republic of Mauritania",
+      "languages": [
+        "ara"
+      ],
+      "cca2": "MR",
+      "cca3": "MRT",
+      "ccn3": "478",
+      "currencies": [
+        "MRU"
+      ],
+      "region": "Africa",
+      "latlng": [
+        20,
+        -12
+      ]
+    }
+  ]
+}

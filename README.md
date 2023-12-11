@@ -49,8 +49,6 @@ Make sure you have the following installed on your machine:
     ```
 
 - The application should now be running at `http://localhost:3000`.
-- Or you can use directly `https://countries-api-frtw.onrender.com`as it it already deployed
-  - **Note**: Since **countries-API** using free hosting  service you may encounter slow response due to the sleep time of the service.
 
 ## Scripts
 
@@ -73,3 +71,10 @@ Make sure you have the following installed on your machine:
 - `GET http://localhost:3000/countries/group-country/:valueToGroupBy`: Group countries by a specified value By **region or language**.
 
 - `GET http://localhost:3000/countries/download`: Download data only **if the request contains the header "X-ADMIN=1"**.
+
+## Decoding the giving API URL
+
+`01101100 01101100 01100001 00101111 00110001 00101110 00110011 01110110
+00101111 01101101 01101111 01100011 00101110 01110011 01100101 01101001 01110010
+01110100 01101110 01110101 01101111 01100011 01110100 01110011 01100101 01110010
+00101111 00101111 00111010 01110011 01110000 01110100 01110100 01101000`

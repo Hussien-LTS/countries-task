@@ -1,0 +1,1295 @@
+{
+  "count": 142,
+  "data": [
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "lit"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "tur"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "lao"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "mya"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "dan"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "deu"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "sqi"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "fra",
+        "gsw",
+        "ita",
+        "roh"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "cnr"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "khm"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "eng",
+        "nld",
+        "pap"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "sot"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "rus",
+        "tuk"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ara",
+        "arc",
+        "ckb"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "fin",
+        "swe"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "tsn"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "deu",
+        "fra",
+        "ltz"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "pau"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "pih"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ind"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "isl"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "nld",
+        "pap"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ara",
+        "eng",
+        "tir"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "eng",
+        "fra"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "hrv"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "bel",
+        "rus"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "cal",
+        "cha",
+        "eng"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "aym",
+        "grn",
+        "que",
+        "spa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "slk"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ber",
+        "mey",
+        "spa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "fil"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "kir",
+        "rus"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "tha"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ces",
+        "slk"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "msa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "mkd"
+      ]
+    },
+    {
+      "_count": {
+        "id": 23
+      },
+      "languages": [
+        "fra"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "swe"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "bis",
+        "eng",
+        "fra"
+      ]
+    },
+    {
+      "_count": {
+        "id": 39
+      },
+      "languages": [
+        "eng"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "mri",
+        "nzs"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "jpn"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": []
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "grn",
+        "spa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "fra",
+        "nrf"
+      ]
+    },
+    {
+      "_count": {
+        "id": 6
+      },
+      "languages": [
+        "por"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "hun"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "nor"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "hin",
+        "tam"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "fra",
+        "kon",
+        "lin",
+        "lua",
+        "swa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "bul"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "fra",
+        "nld"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "por",
+        "pov"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "aym",
+        "que",
+        "spa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "cha",
+        "eng",
+        "spa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ara",
+        "eng"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "dan",
+        "fao"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "nno",
+        "nob",
+        "smi"
+      ]
+    },
+    {
+      "_count": {
+        "id": 3
+      },
+      "languages": [
+        "eng",
+        "swa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "fra",
+        "mfe"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "nep"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "ton"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "vie"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "hmo",
+        "tpi"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "prs",
+        "pus",
+        "tuk"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "amh"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "niu"
+      ]
+    },
+    {
+      "_count": {
+        "id": 14
+      },
+      "languages": [
+        "spa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "fas"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "de"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "mah"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "hye"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "fra",
+        "kon",
+        "lin"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "bwg",
+        "eng",
+        "kck",
+        "khi",
+        "ndc",
+        "nde",
+        "nya",
+        "sna",
+        "sot",
+        "toi",
+        "tsn",
+        "tso",
+        "ven",
+        "xho",
+        "zib"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "tvl"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "jam"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "crs",
+        "eng",
+        "fra"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "por",
+        "zho"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "kal"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "pol"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "mon"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "zho"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "srp"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ara",
+        "som"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "rar"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "dzo"
+      ]
+    },
+    {
+      "_count": {
+        "id": 3
+      },
+      "languages": [
+        "ara",
+        "fra"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "fra",
+        "hat"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ara",
+        "fra",
+        "zdj"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "est"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "bos",
+        "hrv",
+        "srp"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "fra",
+        "kin"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ell"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ita",
+        "lat"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "zho"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ell",
+        "tur"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "lav"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "sqi",
+        "srp"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "nya"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "rus"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "fra",
+        "run"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ara",
+        "ber"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "sin",
+        "tam"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "nau"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "afr",
+        "eng",
+        "nbl",
+        "nso",
+        "sot",
+        "ssw",
+        "tsn",
+        "tso",
+        "ven",
+        "xho",
+        "zul"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "glv"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "aze"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "rus",
+        "tgk"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "fra",
+        "sag"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "kor"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "div"
+      ]
+    },
+    {
+      "_count": {
+        "id": 15
+      },
+      "languages": [
+        "ara"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "fra",
+        "por",
+        "spa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "kat"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "mlt"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "deu",
+        "fra",
+        "nld"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ara",
+        "heb"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "kaz",
+        "rus"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "zho",
+        "msa",
+        "tam"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ukr"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "afr",
+        "deu",
+        "eng",
+        "her",
+        "hgm",
+        "kwn",
+        "loz",
+        "ndo",
+        "tsn"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "fra",
+        "nfr"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "msa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "bjz",
+        "eng",
+        "spa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "ben"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "spa"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "gle"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "por",
+        "tet"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "nld"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "fra",
+        "mlg"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "ita"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "rus",
+        "uzb"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "gil"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "smo",
+        "tkl"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "eng",
+        "smo"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "ssw"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "spa",
+        "cat",
+        "eus",
+        "glc"
+      ]
+    },
+    {
+      "_count": {
+        "id": 2
+      },
+      "languages": [
+        "ron"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "cat"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "fij",
+        "hif"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "slv"
+      ]
+    },
+    {
+      "_count": {
+        "id": 1
+      },
+      "languages": [
+        "eng",
+        "urd"
+      ]
+    }
+  ]
+}
