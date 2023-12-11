@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Country" ALTER COLUMN "ccn3" SET DATA TYPE TEXT;

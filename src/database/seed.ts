@@ -26,9 +26,9 @@ async function seedDatabase() {
       cca3: country.cca3 === 0 ? "" : country.cca3 || "",
       ccn3: country.ccn3
         ? typeof country.ccn3 === "string"
-          ? parseInt(country.ccn3, 10)
-          : country.ccn3
-        : 0,
+          ? country.ccn3
+          : country.ccn3.toString()
+        : "0",
       currencies: Object.keys(country?.currencies || {}),
       region: country.region || "",
       latlng: country.latlng || [0, 0],

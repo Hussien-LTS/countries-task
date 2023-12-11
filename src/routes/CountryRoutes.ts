@@ -1,8 +1,11 @@
 import express, { Router } from "express";
-import { httpGetAllCountries } from "../controllers/CountriesController";
+import {
+  httpGetAllCountries,
+  httpGetSearchCountries,
+} from "../controllers/CountriesController";
 
 const countriesRouter: Router = express.Router();
 
 countriesRouter.get("/all", httpGetAllCountries);
-
+countriesRouter.get("/search", httpGetSearchCountries);
 export default countriesRouter;
