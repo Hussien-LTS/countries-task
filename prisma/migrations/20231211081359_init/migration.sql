@@ -6,9 +6,9 @@ CREATE TABLE "Country" (
     "cca2" TEXT NOT NULL,
     "cca3" TEXT NOT NULL,
     "ccn3" INTEGER NOT NULL,
-    "currencies" BOOLEAN NOT NULL DEFAULT false,
+    "currencies" JSONB NOT NULL,
     "region" TEXT NOT NULL,
-    "coordinates" DECIMAL(65,30)[],
+    "latlng" JSONB NOT NULL,
 
     CONSTRAINT "Country_pkey" PRIMARY KEY ("id")
 );

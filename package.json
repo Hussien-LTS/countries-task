@@ -2,9 +2,14 @@
   "name": "countries-task",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.ts",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run start:typescript &&  npm run seed:database  && npm run start:server && npm run prisma:generate && npm run prisma:migrate",
+    "start:typescript": "tsc",
+    "start:server": "node dist/server.js",
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate": "npx prisma migrate dev",
+    "seed:database": "node dist/database/seed.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +24,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.7.0",
+    "axios": "^1.6.2",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2"
