@@ -1,4 +1,3 @@
-// Import necessary modules
 import http from "http";
 import app from "./app";
 import { PrismaClient } from "@prisma/client";

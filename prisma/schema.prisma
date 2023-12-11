@@ -16,7 +16,7 @@ model Country {
   languages String[]
   cca2      String
   cca3      String
-  ccn3      Int
+  ccn3      String
   currencies Json    
   region    String
   latlng    Json
