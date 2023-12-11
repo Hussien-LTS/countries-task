@@ -1,5 +1,8 @@
+import fs from "fs";
+import path from "path";
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
+import { GroupByType } from "../utlis/interfaces";
 
 const prisma = new PrismaClient();
 
@@ -21,6 +24,19 @@ export const httpGetAllCountries = async (req: Request, res: Response) => {
       skip: offset,
     });
 
+    if (!fs.existsSync("countryData")) {
+      fs.mkdirSync("countryData");
+    }
+
+    fs.writeFileSync(
+      "countryData/AllCountries.json",
+      JSON.stringify(
+        { count: countries.length, page, pageSize, data: countries },
+        null,
+        2
+      ),
+      "utf-8"
+    );
     return res.status(200).json({
       count: countries.length,
       page,
@@ -32,6 +48,7 @@ export const httpGetAllCountries = async (req: Request, res: Response) => {
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
 export const httpGetSearchCountries = async (req: Request, res: Response) => {
   const query = req.query.q as string;
 
@@ -59,6 +76,21 @@ export const httpGetSearchCountries = async (req: Request, res: Response) => {
       take: pageSize,
       skip: offset,
     });
+
+    if (!fs.existsSync("countryData")) {
+      fs.mkdirSync("countryData");
+    }
+
+    fs.writeFileSync(
+      "countryData/SearchedCountries.json",
+      JSON.stringify(
+        { count: countries.length, page, pageSize, data: countries },
+        null,
+        2
+      ),
+      "utf-8"
+    );
+
     return res
       .status(200)
       .json({ count: countries.length, page, pageSize, data: countries });
@@ -68,7 +100,7 @@ export const httpGetSearchCountries = async (req: Request, res: Response) => {
   }
 };
 
-export const getCountryCurrencies = async (req: Request, res: Response) => {
+export const httpGetCountryCurrencies = async (req: Request, res: Response) => {
   try {
     const cca2 = req.params.cca2 as string;
     const country = await prisma.country.findUnique({
@@ -80,12 +112,96 @@ export const getCountryCurrencies = async (req: Request, res: Response) => {
       },
     });
     if (country) {
-      res.status(200).json({ data: country.currencies });
+      if (!fs.existsSync("countryData")) {
+        fs.mkdirSync("countryData");
+      }
+
+      fs.writeFileSync(
+        "countryData/CountryCurrencies.json",
+        JSON.stringify(country, null, 2),
+        "utf-8"
+      );
+      return res.status(200).json({ data: country.currencies });
     } else {
-      res.status(404).json({ error: "Country not found" });
+      return res.status(404).json({ error: "Country not found" });
     }
   } catch (error) {
     console.error("Error in getCountryCurrencies:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+export const httpGetGroupCountries = async (req: Request, res: Response) => {
+  try {
+    const valueToGroupBy = req.params.valueToGroupBy as GroupByType;
+    if (valueToGroupBy !== "languages" && valueToGroupBy !== "region") {
+      return res.status(400).json({
+        error: "Invalid 'valueToGroupBy' parameter",
+        message:
+          "The 'valueToGroupBy' parameter must be either 'languages' or 'region'.",
+      });
+    }
+    const groupedCountries = await prisma.country.groupBy({
+      by: [`${valueToGroupBy}`],
+      _count: {
+        id: true,
+      },
+    });
+    if (!fs.existsSync("countryData")) {
+      fs.mkdirSync("countryData");
+    }
+
+    fs.writeFileSync(
+      "countryData/groupedCountries.json",
+      JSON.stringify(
+        { count: groupedCountries.length, data: groupedCountries },
+        null,
+        2
+      ),
+      "utf-8"
+    );
+    return res
+      .status(200)
+      .json({ count: groupedCountries.length, data: groupedCountries });
+  } catch (error) {
+    console.error("Error in groupCountriesByRegion:", error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+export const httpGetDownloadData = async (req: Request, res: Response) => {
+  const isAdmin = req.headers["x-admin"] === "1";
+
+  if (isAdmin) {
+    const directoryPath = path.join(process.cwd(), "countryData");
+
+    if (!directoryPath) {
+      return res.status(404).send("No directory found ");
+    }
+
+    try {
+      const zipFileName = "downloaded-folder.zip";
+      const zipFilePath = path.join(__dirname, zipFileName);
+
+      const output = fs.createWriteStream(zipFilePath);
+      const archive = require("archiver")("zip");
+
+      output.on("close", () => {
+        res.download(zipFilePath, zipFileName, () => {
+          fs.unlinkSync(zipFilePath);
+        });
+      });
+
+      archive.pipe(output);
+      archive.directory(directoryPath, false);
+      archive.finalize();
+    } catch (error) {
+      console.error("Error occurred:", error);
+      res.status(500).send("Internal Server Error");
+    }
+  } else {
+    return res
+      .status(403)
+      .json({ error: "Access Forbidden: Only admins can download the file." });
   }
 };
