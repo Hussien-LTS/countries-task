@@ -5,10 +5,8 @@ const prisma = new PrismaClient();
 
 async function seedDatabase() {
   try {
-    const countryExists =
-      await prisma.$queryRaw`SELECT 1 FROM "Country" LIMIT 1`;
-
-    if (countryExists) {
+    const countryRowCount = await prisma.country.count();
+    if (countryRowCount > 0) {
       await prisma.$executeRaw`DELETE FROM "Country" CASCADE`;
     }
   } catch (error) {

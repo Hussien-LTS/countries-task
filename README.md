@@ -1,6 +1,6 @@
-# countries-task
+# countries-API
 
-Welcome to **countries-task!** This project is built with Node.js and Prisma, using PostgreSQL as the database.
+Welcome to **countries-API!** This project is built with Node.js and Prisma, using PostgreSQL as the database.
 
 ## Prerequisites
 
@@ -48,7 +48,9 @@ Make sure you have the following installed on your machine:
     npm start
     ```
 
-The application should now be running at `http://localhost:3000`.
+- The application should now be running at `http://localhost:3000`.
+- Or you can use directly `https://countries-api-frtw.onrender.com`as it it already deployed
+  - **Note**: Since **countries-API** using free hosting  service you may encounter slow response due to the sleep time of the service.
 
 ## Scripts
 
