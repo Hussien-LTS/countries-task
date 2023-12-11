@@ -1,10 +1,11 @@
+import fs from "fs";
+import path from "path";
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
-import fs from "fs";
-import child_process from "child_process";
-import path from "path";
+import { GroupByType } from "../utlis/interfaces";
+
 const prisma = new PrismaClient();
-type GroupByType = "languages" | "region";
+
 const getPaginationParams = (req: Request) => {
   const page = parseInt(req.query.page as string, 10) || 1;
   const pageSize = parseInt(req.query.pageSize as string, 10) || 10;
@@ -168,89 +169,37 @@ export const httpGetGroupCountries = async (req: Request, res: Response) => {
   }
 };
 
-async function getFilesRecursively(directoryPath: string): Promise<string[]> {
-  const files: string[] = [];
-
-  const readDirectory = async (currentPath: string) => {
-    const entries = await fs.promises.readdir(currentPath);
-
-    for (const entry of entries) {
-      const entryPath = path.join(currentPath, entry);
-      const stats = await fs.promises.stat(entryPath);
-
-      if (stats.isDirectory()) {
-        await readDirectory(entryPath);
-      } else {
-        files.push(entryPath);
-      }
-    }
-  };
-
-  await readDirectory(directoryPath);
-  return files;
-}
-
 export const httpGetDownloadData = async (req: Request, res: Response) => {
   const isAdmin = req.headers["x-admin"] === "1";
 
   if (isAdmin) {
-    // Construct the file path to the directory from the root of the application
     const directoryPath = path.join(process.cwd(), "countryData");
+
     if (!directoryPath) {
       return res.status(404).send("No directory found ");
     }
 
     try {
-      // Get a list of all files in the directory
-      // const files = await getFilesRecursively(directoryPath);
-      // console.log("length", typeof files);
+      const zipFileName = "downloaded-folder.zip";
+      const zipFilePath = path.join(__dirname, zipFileName);
 
-      // if (files.length === 0) {
-      //   return res.status(404).send("No files found in the directory");
-      // }
+      const output = fs.createWriteStream(zipFilePath);
+      const archive = require("archiver")("zip");
 
-      // res.setHeader(
-      //   "Content-disposition",
-      //   "attachment; filename=countryData.zip"
-      // );
-      // res.setHeader("Content-type", "application/zip");
-
-      // // Use async function to pipe files asynchronously
-      // const streamFiles = async () => {
-      //   console.log("in stream");
-      //   for (const file of files) {
-      //     console.log("in stream file", file);
-      //     const fileStream = fs.createReadStream(file);
-
-      //     // Use once to handle the 'end' event only once
-      //     await new Promise((resolve) => fileStream.once("end", resolve));
-
-      //     // Pipe the fileStream to the response
-      //     fileStream.pipe(res, { end: false });
-
-      //     console.log("in stream after");
-      //   }
-
-      //   // End the response after all files are streamed
-      //   return res.end();
-      // };
-      // console.log("after stream");
-
-      // // Call the async function to start streaming files
-      // return await streamFiles();
-
-      child_process.execSync(`zip -r archive *`, {
-        cwd: "countryData",
+      output.on("close", () => {
+        res.download(zipFilePath, zipFileName, () => {
+          fs.unlinkSync(zipFilePath);
+        });
       });
 
-      // zip archive of your folder is ready to download
-      return res.download("countryData" + "/archive.zip");
+      archive.pipe(output);
+      archive.directory(directoryPath, false);
+      archive.finalize();
     } catch (error) {
-      console.error("Error reading directory:", error);
-      return res.status(500).send("Internal Server Error");
+      console.error("Error occurred:", error);
+      res.status(500).send("Internal Server Error");
     }
   } else {
-    // If the user is not an admin, return a forbidden status
     return res
       .status(403)
       .json({ error: "Access Forbidden: Only admins can download the file." });
