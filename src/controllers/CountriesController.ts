@@ -43,17 +43,24 @@ export const httpGetSearchCountries = async (req: Request, res: Response) => {
   }
 
   try {
+    const { page, pageSize, offset } = getPaginationParams(req);
+
     const countries = await prisma.country.findMany({
       where: {
         OR: [
+          { name: query },
           { cca2: query },
           { cca3: query },
           { ccn3: query },
           { name: { contains: query, mode: "insensitive" } },
         ],
       },
+      take: pageSize,
+      skip: offset,
     });
-    return res.status(200).json({ data: countries });
+    return res
+      .status(200)
+      .json({ count: countries.length, page, pageSize, data: countries });
   } catch (error) {
     console.error("Error in searchCountries:", error);
     return res.status(500).json({ error: "Internal Server Error" });
