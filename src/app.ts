@@ -11,11 +11,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Routes
-app.get("/", (req, res) => {
-  res.status(200).json({ message: "Hello" });
-});
 
-app.use("/", countriesRouter);
+app.use("/countries", countriesRouter);
 // // Error handling middleware
 // app.use((err, req, res, next) => {
 //   console.error(err.stack);
