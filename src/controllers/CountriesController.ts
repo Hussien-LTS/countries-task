@@ -48,11 +48,12 @@ export const httpGetSearchCountries = async (req: Request, res: Response) => {
     const countries = await prisma.country.findMany({
       where: {
         OR: [
-          { name: query },
+          { common_name: query },
+          { official_name: query },
           { cca2: query },
           { cca3: query },
           { ccn3: query },
-          { name: { contains: query, mode: "insensitive" } },
+          { official_name: { contains: query, mode: "insensitive" } },
         ],
       },
       take: pageSize,
@@ -64,5 +65,27 @@ export const httpGetSearchCountries = async (req: Request, res: Response) => {
   } catch (error) {
     console.error("Error in searchCountries:", error);
     return res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+export const getCountryCurrencies = async (req: Request, res: Response) => {
+  try {
+    const cca2 = req.params.cca2 as string;
+    const country = await prisma.country.findUnique({
+      where: {
+        cca2,
+      },
+      select: {
+        currencies: true,
+      },
+    });
+    if (country) {
+      res.status(200).json({ data: country.currencies });
+    } else {
+      res.status(404).json({ error: "Country not found" });
+    }
+  } catch (error) {
+    console.error("Error in getCountryCurrencies:", error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 };

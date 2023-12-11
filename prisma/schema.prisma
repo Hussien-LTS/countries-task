@@ -12,9 +12,10 @@ datasource db {
 
 model Country {
   id        Int      @id @default(autoincrement())
-  name      String
-  languages String[]
-  cca2      String
+  common_name      String      @default("") 
+  official_name      String      @default("")   
+  languages String[]      
+  cca2      String      @unique
   cca3      String
   ccn3      String
   currencies Json    
