@@ -2,26 +2,27 @@ import axios from "axios";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
-const instance = axios.create({
-  timeout: 20000,
-});
+
 async function seedDatabase() {
   try {
-    // Fetch data from the REST Countries API
-    const response = await instance.get("https://restcountries.com/v3.1/all");
+    const response = await axios.get("https://restcountries.com/v3.1/all");
     const countries = response.data;
 
     for (const country of countries) {
-      await prisma.country.create({
+      const res = await prisma.country.create({
         data: {
-          name: country?.name?.common || country?.name?.official,
-          languages: country.languages || "no value found",
-          cca2: country.cca2 || "no value found",
-          cca3: country.cca3 || "no value found",
-          ccn3: country.ccn3 || "no value found",
-          currencies: country?.currencies || "no value found",
-          region: country.region || "no value found",
-          latlng: country.latlng || "no value found",
+          name: country?.name?.common || country?.name?.official || "Unknown",
+          languages: Object.keys(country.languages || {}),
+          cca2: country.cca2 || "",
+          cca3: country.cca3 === 0 ? "" : country.cca3 || "",
+          ccn3: country.ccn3
+            ? typeof country.ccn3 === "string"
+              ? parseInt(country.ccn3, 10)
+              : country.ccn3
+            : 0,
+          currencies: Object.keys(country?.currencies || {}),
+          region: country.region || "",
+          latlng: country.latlng || [0, 0],
         },
       });
     }
