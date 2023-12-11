@@ -1,39 +1,47 @@
 import axios from "axios";
 import { PrismaClient } from "@prisma/client";
-import { Country } from "../Interfaces";
 
 const prisma = new PrismaClient();
+
 async function seedDatabase() {
   try {
-    // Fetch data from the REST Countries API
-    const response = await axios.get<Country[]>(
-      "https://restcountries.com/v3.1/all"
-    );
+    const countryExists =
+      await prisma.$queryRaw`SELECT 1 FROM "Country" LIMIT 1`;
+
+    if (countryExists) {
+      await prisma.$executeRaw`DELETE FROM "Country" CASCADE`;
+    }
+  } catch (error) {
+    console.error("Error during drop Table seeding:", error);
+    return;
+  }
+  try {
+    const response = await axios.get("https://restcountries.com/v3.1/all");
     const countries = response.data;
 
-    // Seed the database with the fetched data
-    for (const country of countries) {
-      await prisma.country.create({
-        data: {
-          name: country.name,
-          languages: country.languages,
-          cca2: country.cca2,
-          cca3: country.cca3,
-          ccn3: country.ccn3,
-          currencies: country?.currencies,
-          region: country.region,
-          latlng: country.latlng,
+    const countriesData = countries.map((country: any) => ({
+      name: country?.name?.common || country?.name?.official || "Unknown",
+      languages: Object.keys(country.languages || {}),
+      cca2: country.cca2 || "",
+      cca3: country.cca3 === 0 ? "" : country.cca3 || "",
+      ccn3: country.ccn3
+        ? typeof country.ccn3 === "string"
+          ? parseInt(country.ccn3, 10)
+          : country.ccn3
+        : 0,
+      currencies: Object.keys(country?.currencies || {}),
+      region: country.region || "",
+      latlng: country.latlng || [0, 0],
+    }));
 
-          // Add other fields based on your Prisma schema
-        },
-      });
-    }
+    const res = await prisma.country.createMany({
+      data: countriesData,
+    });
 
-    console.log("Database seeding completed");
+    console.log("Database seeding completed", res);
   } catch (error) {
     console.error("Error during database seeding:", error);
   } finally {
-    // Disconnect the Prisma client
     await prisma.$disconnect();
   }
 }

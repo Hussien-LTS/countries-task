@@ -10,7 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Country {
   id        Int      @id @default(autoincrement())
   name      String
@@ -18,8 +17,7 @@ model Country {
   cca2      String
   cca3      String
   ccn3      Int
-  currencies Json 
+  currencies Json    
   region    String
-  latlng Decimal[]
+  latlng    Json
 }
-
