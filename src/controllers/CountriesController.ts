@@ -1,20 +1,31 @@
 import { Request, Response } from "express";
-import axios from "axios";
+import { PrismaClient } from "@prisma/client";
 
-const baseURL = "https://restcountries.com/v3.1";
+const prisma = new PrismaClient();
 
-async function httpGetAllCountries(req: Request, res: Response) {
+export const httpGetAllCountries = async (req: Request, res: Response) => {
   try {
-    const result = await axios.get(`${baseURL}/all`);
-    console.log(result.data);
-    const x = result.data[0];
-    return res.status(200).json({ x });
-  } catch (error) {
-    return res.status(404).json({
-      error: error,
-      statusCode: 404,
-    });
-  }
-}
+    // Extract page and pageSize from query parameters
+    const page = parseInt(req.query.page as string, 10) || 1;
+    const pageSize = parseInt(req.query.pageSize as string, 10) || 10;
 
-export { httpGetAllCountries };
+    // Calculate the offset based on the page and pageSize
+    const offset = (page - 1) * pageSize;
+
+    // Query the database with pagination
+    const countries = await prisma.country.findMany({
+      take: pageSize,
+      skip: offset,
+    });
+
+    return res.status(200).json({
+      count: countries.length,
+      page,
+      pageSize,
+      data: countries,
+    });
+  } catch (error) {
+    console.error("Error in getAllCountries:", error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+};
