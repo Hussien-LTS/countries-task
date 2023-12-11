@@ -48,11 +48,12 @@ export const httpGetSearchCountries = async (req: Request, res: Response) => {
     const countries = await prisma.country.findMany({
       where: {
         OR: [
-          { name: query },
+          { common_name: query },
+          { official_name: query },
           { cca2: query },
           { cca3: query },
           { ccn3: query },
-          { name: { contains: query, mode: "insensitive" } },
+          { official_name: { contains: query, mode: "insensitive" } },
         ],
       },
       take: pageSize,

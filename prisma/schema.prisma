@@ -12,7 +12,8 @@ datasource db {
 
 model Country {
   id        Int      @id @default(autoincrement())
-  name      String
+  common_name      String      @default("") 
+  official_name      String      @default("")   
   languages String[]
   cca2      String
   cca3      String

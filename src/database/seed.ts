@@ -20,7 +20,8 @@ async function seedDatabase() {
     const countries = response.data;
 
     const countriesData = countries.map((country: any) => ({
-      name: country?.name?.common || country?.name?.official || "Unknown",
+      common_name: country?.name?.common || "",
+      official_name: country?.name?.official || "",
       languages: Object.keys(country.languages || {}),
       cca2: country.cca2 || "",
       cca3: country.cca3 === 0 ? "" : country.cca3 || "",
